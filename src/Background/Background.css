@@ -196,7 +196,8 @@
   #background h1 {
     white-space: normal; /* Allow wrapping at mobile size */
     font-size: 1.8rem; /* Slightly smaller font size for better wrapping */
-    width: 100%; /* Ensure full width for consistent wrapping */
+    width: 80%; /* Ensure full width for consistent wrapping */
     line-height: 1.2; /* Better spacing between wrapped lines */
+    padding-right: 80px;
   }
 }

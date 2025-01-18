@@ -41,7 +41,7 @@ const Experience = () => {
       title: "Undegraduate TA (Algorithms and Complexity)",
       period: "2023 - 2024",
       location: "Buffalo, NY",
-      website: "https://cse.buffalo.edu/~nasrinak/cse331/SP24/policies/syllabus.html",
+      website: "",
       description: "Reviewed algorithm design paradigms and time complexity analysis. Graded/provided feedback on assigned homeworks and exams. Assisted +300 students in formation of proofs and programming assignments through hosted office hours twice a week.",
       skills: ["Python", "Java"]
     },
