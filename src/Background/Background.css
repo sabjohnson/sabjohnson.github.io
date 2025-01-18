@@ -3,8 +3,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(100% - 40px);
+  width: calc(100% - 80px);
   margin-left: 40px;
+  margin-right: 40px;
   padding: 60px 40px;
   box-sizing: border-box;
   background-color: var(--background-color);
@@ -98,13 +99,13 @@
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1200px) {
   #background > div:first-of-type {
     flex-direction: column;
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1200px) {
   #background > div:first-of-type {
     flex-direction: column;
     align-items: center;
@@ -126,8 +127,8 @@
 
 @media (max-width: 650px) {
   #background {
-    width: calc(100% - 30px);
-    margin-left: 30px;
+    width: calc(100% - 80px);
+    margin: 0 30px;
     padding: 60px 20px;
   }
 
@@ -177,4 +178,25 @@
 .body-text .highlight {
   color: var(--text-highlight);
   font-weight: bold;
+}
+
+/* Main Heading */
+#background h1 {
+  font-size: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 300;
+  color: var(--title-color);
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  text-align: center;
+  white-space: nowrap; /* Keep it on one line by default */
+}
+
+@media (max-width: 650px) {
+  #background h1 {
+    white-space: normal; /* Allow wrapping at mobile size */
+    font-size: 1.8rem; /* Slightly smaller font size for better wrapping */
+    width: 100%; /* Ensure full width for consistent wrapping */
+    line-height: 1.2; /* Better spacing between wrapped lines */
+  }
 }

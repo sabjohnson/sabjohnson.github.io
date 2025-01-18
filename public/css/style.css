@@ -254,4 +254,11 @@
     #ascii-controls {
       display: none;
     }
+
+    #overlay-container {
+      /* Only override properties that need to change on mobile */
+      width: 70%;  /* Slightly smaller on mobile if desired */
+      margin-left: 40px; /* Smaller padding on mobile if desired */
+      margin-top: 20%;
+    }  
   }

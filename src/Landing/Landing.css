@@ -77,3 +77,9 @@
   height: 100vh; /* Full viewport height */
   background: rgba(121, 51, 51, 0); /* Ensure background for content */
 }
+
+@media (max-width: 650px) {
+  .anchor-button {
+    display: none;
+  }  
+}

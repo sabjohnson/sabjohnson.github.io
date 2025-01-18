@@ -108,6 +108,8 @@ nav ul {
   gap: 20px;
   padding: 0;
   margin: 0;
+  width: auto;
+  justify-content: flex-start;
 }
 
 nav ul li {
