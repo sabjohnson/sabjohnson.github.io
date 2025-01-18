@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.e487ce03.css",
-    "main.js": "/static/js/main.75645477.js",
+    "main.css": "/static/css/main.0cea4f31.css",
+    "main.js": "/static/js/main.f17b5f64.js",
     "static/media/officecodepro-bold.otf": "/static/media/officecodepro-bold.8a7961946b5ba3b18135.otf",
     "static/media/officecodepro-light.otf": "/static/media/officecodepro-light.faf443f8ce9534f636a4.otf",
     "index.html": "/index.html",
-    "main.e487ce03.css.map": "/static/css/main.e487ce03.css.map",
-    "main.75645477.js.map": "/static/js/main.75645477.js.map"
+    "main.0cea4f31.css.map": "/static/css/main.0cea4f31.css.map",
+    "main.f17b5f64.js.map": "/static/js/main.f17b5f64.js.map"
   },
   "entrypoints": [
-    "static/css/main.e487ce03.css",
-    "static/js/main.75645477.js"
+    "static/css/main.0cea4f31.css",
+    "static/js/main.f17b5f64.js"
   ]
 }
