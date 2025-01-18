@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.257033fc.css",
+    "main.js": "/static/js/main.ce90cf44.js",
+    "static/media/officecodepro-bold.otf": "/static/media/officecodepro-bold.8a7961946b5ba3b18135.otf",
+    "static/media/officecodepro-light.otf": "/static/media/officecodepro-light.faf443f8ce9534f636a4.otf",
+    "index.html": "/index.html",
+    "main.257033fc.css.map": "/static/css/main.257033fc.css.map",
+    "main.ce90cf44.js.map": "/static/js/main.ce90cf44.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.257033fc.css",
+    "static/js/main.ce90cf44.js"
+  ]
+}

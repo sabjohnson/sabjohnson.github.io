@@ -1,0 +1,257 @@
+/**
+ * Copyright (c) 2011-present Nick Kwiatek <http://nkwiatek.com>
+ * http://opensource.org/licenses/MIT
+ */
+
+ /* Ensure the animation box is positioned relative */
+#animation-box {
+    position: relative; /* Position it relative to this box */
+    width: 100%; /* Adjust width as needed */
+    height: 80%; /* Adjust height as needed */
+    background-color: lightgray; /* Placeholder color */
+    /* Add other styling for the animation box here */
+  }
+  
+/* CSS Variables */
+:root {
+    /* Colors - Normal Mode */
+    --text-primary: #430a0a;
+    --text-accent: red;
+    --text-fluid: rgb(0, 0, 0);
+    --bg-primary: var(--background-color);
+    --button-bg: #90bdc5;
+    --button-border: rgb(0, 143, 156);
+    --button-shadow: var(--background-shadow);
+    --button-shadow-hover: rgb(220, 220, 220);
+    
+    /* Colors - Hacker Mode */
+    --hacker-text-primary: #ddd;
+    --hacker-text-accent: #00CC00;
+    --hacker-bg: black;
+    --hacker-button-bg: #00CC00;
+    --hacker-button-border: #009900;
+    
+    /* Typography */
+    --font-mono: "Courier New", monospace;
+    --font-size-base: 10px;
+    --line-height-base: 15px;
+    
+    /* Layout */
+    --overlay-padding: 21px;
+    --main-offset-left: 22px;
+    --main-offset-top: 45px;
+    
+    /* Transitions */
+    --transition-default: all 0.8s ease-in;
+  }
+  
+  /* Base Layout */
+  #xp-module {
+    
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+  }
+  
+  #xp-loading {
+    display: none;
+  }
+  
+  /* ASCII Container */
+  #ascii-container {
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+    transition: var(--transition-default);
+  }
+  
+  /* Typography Base */
+  #ascii-container,
+  #ascii-main,
+  #ascii-fluid,
+  .____ascii-chartest____,
+  #ascii-container button,
+  #ascii-container dl,
+  #ascii-container dd,
+  #ascii-container dt {
+    margin: 0;
+    padding: 0;
+    color: var(--text-primary);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base) !important;
+    font-family: var(--font-mono);
+  }
+  
+  /* Links */
+  #ascii-container a {
+    color: var(--text-accent) !important;
+    text-decoration: underline;
+  }
+  
+  #ascii-container a:hover {
+    text-decoration: none;
+  }
+  
+  /* Definition Lists */
+  #ascii-container dd {
+    text-indent: -4px;
+  }
+  
+  #ascii-container dt {
+    font-style: italic;
+    text-align: right;
+  }
+  
+  /* Buttons */
+  #ascii-container button {
+    padding: 12px;
+    outline: none;
+    cursor: pointer;
+    color: var(--bg-primary);
+    background: var(--button-bg);
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: rgb(248, 254, 255);
+    border: 2px solid var(--button-border);
+    box-shadow: 2px 2px 0px 0px var(--button-shadow);
+    -webkit-box-shadow: 2px 2px 0px 0px var(--button-shadow);
+    z-index: 2;
+  }
+  
+  #ascii-container button::-moz-focus-inner {
+    border: 0;
+  }
+  
+  #ascii-container button:hover {
+    position: relative;
+    left: -1px;
+    top: -1px;
+    box-shadow: 3px 3px 0px 0px var(--button-shadow-hover);
+    -webkit-box-shadow: 3px 3px 0px 0px var(--button-shadow-hover);
+  }
+  
+  #ascii-container button:active {
+    position: relative;
+    left: 1px;
+    top: 1px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+  
+  /* ASCII Fluid Display */
+  #ascii-fluid {
+    padding: 0 50px; /* 50px padding on the left and right */
+    width: 100%;
+    height: 50vh;
+    color: var(--text-fluid);
+    cursor: default;
+    white-space: pre;
+    display: inline-block;
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #ascii-fluid.fading {
+    font-style: italic;
+  }
+  
+  /* Layout Components */
+  #ascii-main {
+    position: absolute;
+    z-index: 100;
+    left: var(--main-offset-left);
+    top: var(--main-offset-top);
+    pointer-events: none;
+  }
+  
+  .overlay {
+    padding: 0 var(--overlay-padding);
+    background: var(--bg-primary);
+    pointer-events: auto;
+    transition: var(--transition-default);
+  }
+
+  #ascii-fps {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    display: none;
+    background: var(--bg-primary);
+  }
+  
+  /* Hacker Mode Theme */
+  .ascii-hackermode,
+  .ascii-hackermode .overlay {
+    background: var(--hacker-bg);
+  }
+  
+  .ascii-hackermode dd, 
+  .ascii-hackermode dt {
+    color: var(--hacker-text-primary);
+  }
+  
+  .ascii-hackermode h1 {
+    color: var(--bg-primary);
+  }
+  
+  .ascii-hackermode a,
+  .ascii-hackermode #ascii-fluid {
+    color: var(--hacker-text-accent) !important;
+  }
+  
+  .ascii-hackermode button {
+    background: var(--hacker-button-bg);
+    border-color: var(--hacker-button-border);
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+  
+  /* dont touch please (needed for stacking elements) */
+  #xp-module {
+    position: relative; /* Ensure this is the relative parent */
+    height: 70vh;
+  }
+  
+  #ascii-container {
+    position: absolute; /* Positioned within the parent */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    z-index: 1; /* Ensure it is behind the overlay */
+  }
+  
+  #overlay-container {
+    position: absolute; /* Positioned within the parent */
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    background-color: var(--fluid-box);
+    border: 3px solid var(--fluid-box-border);
+    padding: 20px;
+    z-index: 2; /* Ensure it is above the ASCII animation */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    pointer-events:none;
+    overflow: auto;
+  }
+  
+  #ascii-controls {
+    position: absolute;
+    display: inline-block;
+    bottom: 5%;
+    left: 20%;
+  }
+
+  @media (max-width: 650px) {
+    #ascii-controls {
+      display: none;
+    }
+  }
