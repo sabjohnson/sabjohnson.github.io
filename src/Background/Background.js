@@ -33,7 +33,7 @@ const Background = () => {
 
   return (
     <section id="background">
-      <h1>My Interests/Background</h1>
+      <h1>My Interests</h1>
       <div>
         {sections.map((section, index) => (
           <div key={index}>

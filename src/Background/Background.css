@@ -198,6 +198,5 @@
     font-size: 1.8rem; /* Slightly smaller font size for better wrapping */
     width: 80%; /* Ensure full width for consistent wrapping */
     line-height: 1.2; /* Better spacing between wrapped lines */
-    padding-right: 80px;
   }
 }
