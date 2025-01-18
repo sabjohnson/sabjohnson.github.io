@@ -1,0 +1,6 @@
+.vertical-email {
+    position: fixed;
+    right: 2rem;
+    bottom: 0;
+    z-index: 10;
+  }

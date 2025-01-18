@@ -1,0 +1,196 @@
+/* CSS Variables */
+:root {
+  --background-color: #fffbe0;
+  --background-shadow: #9e9247;
+  --title-color: #2983b0;
+  --text-color: #000000;
+  --text-highlight: #cd5858;
+  --accent-color: #2983b0;
+  --accent-2: #8ec560;
+  --hover-color: #363636;
+  --outline-color: #000000;
+  --fluid-box: #900000;
+  --fluid-box-border: #540000;
+}
+
+/* Font Declarations */
+@font-face {
+  font-family: 'office-code-pro';
+  src: url('/public/assets/fonts/officecodepro-light.otf') format('opentype'),
+       url('/public/assets/fonts/officecodepro-bold.otf') format('opentype');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'office-code-pro';
+  src: url('/public/assets/fonts/officecodepro-bold.otf') format('opentype');
+  font-weight: 900;
+}
+
+/* Reset and Base Styles */
+html, body {
+  scroll-behavior: smooth;
+  height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 200;
+  color: var(--text-color);
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  background-color: var(--background-color);
+}
+
+/* Layout Components */
+.content,
+.section-wrapper,
+.container {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Section Styles */
+section {
+  min-height: 100vh;
+  padding: 40px 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  margin: 0;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Navigation Styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: calc(100%);
+  background-color: var(--background-color);
+  height: 60px;
+  z-index: 1000;
+  padding: 0 20px;
+  border-bottom: 2px solid var(--outline-color);
+  box-sizing: border-box;
+}
+
+/* Logo Styles */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Navigation Lists */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a span {
+  font-weight: bold;
+  color: var(--accent-color);
+  margin: 0 6px;
+}
+
+nav ul li a:hover {
+  color: var(--hover-color);
+}
+
+/* Main Content Styles */
+main, section, .content {
+  margin-left: 40px;
+  width: calc(100% - 40px);
+  box-sizing: border-box;
+}
+
+/* Typography */
+.content p2 {
+  display: block;
+  margin-top: 20px;
+  font-size: 0.65rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+/* Small Text Style */
+small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 40px);
+  margin-left: 40px;
+  padding: 20px;
+  color: var(--text-color);
+  box-sizing: border-box;
+}
+
+/* Media Queries */
+@media (max-width: 650px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .logo-image {
+    height: 40px;
+  }
+
+  nav ul {
+    width: 100%;
+    justify-content: center;
+    gap: 12px;
+    padding-bottom: 10px;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+  }
+
+  nav ul li a span {
+    margin: 0 4px;
+  }
+}

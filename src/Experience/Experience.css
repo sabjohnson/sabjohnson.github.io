@@ -1,0 +1,130 @@
+#experience {
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% - 40px);
+  margin-left: 40px;
+  box-sizing: border-box;
+}
+
+#experience h1 {
+  font-size: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 300;
+  color: var(--accent-color);
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Accordion Container */
+#experience > div {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.accordion-item {
+  border: 2px solid var(--outline-color);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Accordion Header */
+.accordion-header {
+  background-color: var(--background-color);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  cursor: pointer;
+  position: relative;
+}
+
+.title-section {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-right: 30px;
+}
+
+.job-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.period {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  white-space: nowrap;
+}
+
+.toggle-icon {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 1.5rem;
+  width: 20px;
+  text-align: center;
+}
+
+/* Accordion Content */
+.accordion-content {
+  padding: 20px;
+  border-top: 1px solid var(--outline-color);
+  text-align: left;
+}
+
+.job-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.location-website {
+  display: flex;
+  gap: 20px;
+}
+
+.description {
+  line-height: 1.6;
+}
+
+/* Skills Section */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* Mobile Styles */
+@media (max-width: 650px) {
+  #experience {
+    width: calc(100% - 30px);
+    margin-left: 30px;
+    padding: 20px;
+  }
+
+  .title-section {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .location-website {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

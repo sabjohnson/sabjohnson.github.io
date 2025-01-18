@@ -1,0 +1,180 @@
+/* Background Section Container */
+#background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% - 40px);
+  margin-left: 40px;
+  padding: 60px 40px;
+  box-sizing: border-box;
+  background-color: var(--background-color);
+}
+
+/* Main Heading */
+#background h1 {
+  font-size: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 300;
+  color: var(--title-color);
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Grid Container */
+#background > div:first-of-type {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 40px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Content Boxes */
+#background > div:first-of-type > div {
+  flex: 1;
+  aspect-ratio: 1;
+  max-width: 300px;
+  min-width: 250px;
+  /* border: 2px solid var(--outline-color); */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid #000000;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Box Titles */
+#background > div:first-of-type > div > div:first-child > span {
+  font-weight: 900;
+  font-size: 1.3rem;
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-color);
+  letter-spacing: 0.5px;
+}
+
+#background > div:first-of-type > div > div:first-child > div {
+  font-weight: 300;
+  color: #666;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+}
+
+/* Quote Box */
+#background > div:last-child {
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 0px solid var(--outline-color);
+  padding: 30px;
+  margin: 40px auto 0;
+  box-sizing: border-box;
+}
+
+#background > div:last-child > div:first-child {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+#background > div:last-child > div:last-child {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Breakpoints */
+@media (max-width: 1200px) {
+  #background > div:first-of-type {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 850px) {
+  #background > div:first-of-type {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 850px) {
+  #background > div:first-of-type {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  #background > div:first-of-type > div {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: auto;
+    min-height: 300px;
+  }
+
+  #background > div:last-child {
+    width: calc(100% - 20px);
+    padding: 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  #background {
+    width: calc(100% - 30px);
+    margin-left: 30px;
+    padding: 60px 20px;
+  }
+
+  #background > div:last-child {
+    width: 100%;
+    padding: 20px 15px;
+  }
+
+  #background > div:last-child > div:first-child {
+    font-size: 1.1rem;
+  }
+}
+
+/* Title Underline */
+/* Box Titles Container */
+#background > div:first-of-type > div > div:first-child {
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+/* Title Text */
+#background > div:first-of-type > div > div:first-child > span {
+  font-weight: 900;
+  font-size: 1.3rem;
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-color);
+  letter-spacing: 0.5px;
+}
+
+#background > div:first-of-type > div > div:first-child::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10%;  /* Move line in by 10% from left */
+  width: 80%;  /* Make line 80% of container width */
+  height: 2px;
+  background-color: var(--accent-2);
+}
+
+/* Highlight words in content */
+.body-text {
+  line-height: 1.6;
+}
+
+.body-text .highlight {
+  color: var(--text-highlight);
+  font-weight: bold;
+}
