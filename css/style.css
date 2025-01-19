@@ -129,6 +129,24 @@
     box-shadow: 3px 3px 0px 0px var(--button-shadow-hover);
     -webkit-box-shadow: 3px 3px 0px 0px var(--button-shadow-hover);
   }
+
+  #ascii-container button:hover::after {
+    content: "Move (or jam) your mouse around the screen to generate ascii fluid. This button will clear your artwork.";
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--background-color);
+    padding: 8px 15px;  /* More horizontal padding */
+    border: 1px solid var(--outline-color);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    width: 300px;  /* Fixed width */
+    line-height: 1.2;  /* Tighter line spacing */
+    text-align: center;  /* Center the text */
+    white-space: normal;  /* Allow text to wrap */
+  }
   
   #ascii-container button:active {
     position: relative;
